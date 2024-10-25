@@ -42,3 +42,7 @@ def create_instances(client: 'boto3.client', ami_type: str, instance_amount: int
 # Example usage of the function
 ec2_client = get_ec2_client()
 create_instances(ec2_client, "linux 2")
+s3_client = get_s3_client()
+
+print_bucket_names(s3_client)
+print_instance_ids(ec2_client)
